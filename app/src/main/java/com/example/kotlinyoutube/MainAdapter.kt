@@ -23,8 +23,9 @@ class MainAdapter(val homeFeed: HomeFeed): RecyclerView.Adapter<CustomViewHolder
     }
 
     override fun onBindViewHolder(holder: CustomViewHolder, position: Int) {
-        val videoTitle = videoTitles.get(position)
-        holder.view.textView_video_title.text = videoTitle
+//      val videoTitle = videoTitles.get(position)
+        val video = homeFeed.videos.get(position)
+        holder.view.textView_video_title.text = video.name
     }
 }
 
